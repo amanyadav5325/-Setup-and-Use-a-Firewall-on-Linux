@@ -1,0 +1,39 @@
+##all commands and explains
+✅ Step-by-Step:
+1. UFW Install:
+
+sudo apt update
+sudo apt install ufw
+
+2. Set Default Policy:
+
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+3. Allow Important Ports:
+
+sudo ufw allow ssh        # For remote access
+sudo ufw allow 80/tcp     # HTTP
+sudo ufw allow 443/tcp    # HTTPS
+
+4. Block Example:
+
+sudo ufw deny 25/tcp      # Block email (SMTP) port
+
+5. Enable Firewall:
+
+sudo ufw enable
+
+6. Check Status:
+
+sudo ufw status verbose
+
+📄 Deliverable:
+
+You can copy your firewall rules to a file:
+
+sudo ufw status > my_firewall_rules.txt
+
+Or take a screenshot:
+
+gnome-terminal > run: sudo ufw status verbose
